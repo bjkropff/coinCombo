@@ -39,4 +39,13 @@ describe('coinCombo', function(){
     it("will return '2 quarters 2 dimes' on 70", function(){
       expect(coinCombo2(70)).to.equal("2 quarters 2 dimes 0 nickels 0 pennies");
     });
+
+    it("will return '1 quarters 1 dimes 1 nickels 1 pennies' on 41", function(){
+      expect(coinCombo2(41)).to.equal("1 quarters 1 dimes 1 nickels 1 pennies");
+    });
+
+    //coinCombo3
+    it("will return only the coins that will be given (2 quarters 2 dimes)", function(){
+      expect(coinCombo3(70)).to.equal("2 quarters 2 dimes");
+    })
 });
