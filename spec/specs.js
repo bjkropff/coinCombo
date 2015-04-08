@@ -23,7 +23,20 @@ describe('coinCombo', function(){
         expect(coinCombo(50)).to.eql(["quarter","quarter"]);
     });
 
-    // it("will return a quarter, a dime, a nickel, and a penny", function() {
-    //   expect(coinComber(50)).to.eql(["quarter",])
-    // })
+    it("will return a quarter, a dime, a nickel, and a penny", function() {
+      expect(coinCombo(41)).to.eql(["quarter", "dime", "nickel", "penny"]);
+    });
+
+    it("will return a quarter, 2 dimes, and a penny", function() {
+      expect(coinCombo(46)).to.eql(["quarter", "dime", "dime", "penny"]);
+    });
+
+    //coinCombo2
+    it("will return '2 quarters' on 50", function(){
+      expect(coinCombo2(50)).to.eql("2 quarters 0 dimes 0 nickels 0 pennies");
+    });
+
+    it("will return '2 quarters 2 dimes' on 70", function(){
+      expect(coinCombo2(70)).to.equal("2 quarters 2 dimes 0 nickels 0 pennies");
+    });
 });
